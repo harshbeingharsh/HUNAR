@@ -1,0 +1,25 @@
+{
+  "name": "sports-training-hub",
+  "version": "1.0.0",
+  "description": "A comprehensive platform for sports training and coaching",
+  "private": true,
+  "workspaces": [
+    "BACK END",
+    "FRONT END"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd \"BACK END\" & npm run dev",
+    "dev:frontend": "cd \"FRONT END\" & npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd \"BACK END\" && npm run build",
+    "build:frontend": "cd \"FRONT END\" && npm run build",
+    "install:all": "npm install && cd \"BACK END\" && npm install && cd \"../FRONT END\" && npm install"
+  },
+  "keywords": ["sports", "training", "coaching", "nextjs", "supabase"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
